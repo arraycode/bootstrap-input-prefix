@@ -1,0 +1,93 @@
+// Form Input Prefix Icon
+//
+// This is the reverse of the standard Bootstrap feedback icons on form input
+// fields. Instead of being on the right-hand side to be used for validation
+// states, the prefix icon appears on the left hand side. This is really useful
+// for when you want to put a search icon inside a search text field.
+
+// Mix-in for validation state colors
+.form-prefix-validation(@text-color: #555) {
+  // Optional feedback icon
+  .form-control-prefix {
+    color: @text-color;
+  }
+}
+
+.has-prefix {
+  // Enable absolute positioning
+  position: relative;
+
+  // Ensure icons don't overlap text
+  .form-control {
+    padding-left: (@input-height-base * 0.9);
+  }
+}
+
+// Prefix icon
+.form-control-prefix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; // Ensure icon is above input groups
+  display: block;
+  width: @input-height-base;
+  height: @input-height-base;
+  line-height: @input-height-base;
+  text-align: center;
+  pointer-events: none;
+}
+
+.input-lg + .form-control-prefix {
+  width: @input-height-large - 15;
+  height: @input-height-large;
+  line-height: @input-height-large;
+}
+.input-sm + .form-control-prefix {
+  width: @input-height-small;
+  height: @input-height-small;
+  line-height: @input-height-small;
+}
+
+// Feedback states
+.has-success {
+  .form-prefix-validation(@state-success-text);
+}
+.has-warning {
+  .form-prefix-validation(@state-warning-text);
+}
+.has-error {
+  .form-prefix-validation(@state-danger-text);
+}
+
+// Reposition prefix icon if input has visible label above
+.has-prefix label {
+
+  & ~ .form-control-prefix {
+    top: (@line-height-computed + 5); // Height of the `label` and its margin
+  }
+  &.sr-only ~ .form-control-prefix {
+    top: 0;
+  }
+}
+
+.form-inline {
+  .has-prefix {
+    position: static;
+
+    .prefix-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    // Re-override the prefix icon.
+    .form-control-prefix {
+      top: 0;
+    }
+  }
+}
+
+.form-horizontal {
+  .has-prefix .form-control-prefix {
+    left: (@grid-gutter-width / 2);
+  }
+}

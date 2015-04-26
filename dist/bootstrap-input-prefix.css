@@ -1,0 +1,56 @@
+.has-prefix {
+  position: relative;
+}
+.has-prefix .form-control {
+  padding-left: 30.6px;
+}
+.form-control-prefix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+.input-lg + .form-control-prefix {
+  width: 31px;
+  height: 46px;
+  line-height: 46px;
+}
+.input-sm + .form-control-prefix {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.has-success .form-control-prefix {
+  color: #3c763d;
+}
+.has-warning .form-control-prefix {
+  color: #8a6d3b;
+}
+.has-error .form-control-prefix {
+  color: #a94442;
+}
+.has-prefix label ~ .form-control-prefix {
+  top: 25px;
+}
+.has-prefix label.sr-only ~ .form-control-prefix {
+  top: 0;
+}
+.form-inline .has-prefix {
+  position: static;
+}
+.form-inline .has-prefix .prefix-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.form-inline .has-prefix .form-control-prefix {
+  top: 0;
+}
+.form-horizontal .has-prefix .form-control-prefix {
+  left: 15px;
+}
