@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bootstrap Input Prefix by arraycode</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Bootstrap Input Prefix</h1>
+        <p>Prefix your Bootstrap form input fields with icons on the inside left of the field</p>
+        <p class="view"><a href="https://github.com/arraycode/bootstrap-input-prefix">View the Project on GitHub <small>arraycode/bootstrap-input-prefix</small></a></p>
+        <ul>
+          <li><a href="https://github.com/arraycode/bootstrap-input-prefix/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/arraycode/bootstrap-input-prefix/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/arraycode/bootstrap-input-prefix">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="bootstrap-form-input-prefix-icons" class="anchor" href="#bootstrap-form-input-prefix-icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bootstrap Form Input Prefix Icons</h1>
+
+<p>The <strong>bootstrap-input-prefix</strong> library is a small add-on for Twitter's Bootstrap CSS framework that enables you to add glyphicons (or Font-Awesome icons) into your form input fields. By default, Bootstrap includes the concept of feedback icons for form fields. These are typically used to place an icon on the inside right of a form field to indicate the validation state of the field (i.e. a checkbox for a valid field). This doesn't allow you to place icons on the inside left of the form field, however. Hence the need for <strong>bootstrap-input-prefix</strong>.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>To use, simply load the CSS file in your HTML page <em>after</em> the line where you load Bootstrap:</p>
+
+<pre><code>&lt;link rel="stylesheet" href="/path/to/bootstrap-input-prefix.min.css"&gt;
+</code></pre>
+
+<p>Using the library works almost identically to the feedback icons that come with Bootstrap itself. Simply add a <code>has-prefix</code> class to the <code>form-group</code> block, and add the <code>form-control-prefix</code> class to the glyphicon. You can also use this library with Font-Awesome icons.</p>
+
+<pre><code>&lt;div class="form-group has-prefix"&gt;
+    &lt;label class="control-label"&gt;Regular Input Field&lt;/label&gt;
+    &lt;input type="text" class="form-control" placeholder="Search our site..."&gt;
+    &lt;span class="glyphicon glyphicon-search text-muted form-control-prefix" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The library also works with small and large input fields without any additional classes. Simply add the <code>input-sm</code> or <code>input-lg</code> class to the <code>&lt;input&gt;</code> element like you normally would.</p>
+
+<p>You can also use the library with horizontal forms, for example:</p>
+
+<pre><code>&lt;form class="form-horizontal"&gt;
+    &lt;div class="form-group has-prefix"&gt;
+        &lt;label class="control-label col-sm-3"&gt;Regular Input Field&lt;/label&gt;
+        &lt;div class="col-sm-9"&gt;
+            &lt;input type="text" class="form-control" placeholder="Search our site..."&gt;
+            &lt;span class="glyphicon glyphicon-search text-muted form-control-prefix" aria-hidden="true"&gt;&lt;/span&gt;            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>Inline forms work too, but to get them right you need to wrap the input field and the icon in a <code>span</code> element with the class <code>prefix-wrapper</code>:</p>
+
+<pre><code>&lt;form class="form-inline"&gt;
+    &lt;div class="form-group has-prefix"&gt;
+        &lt;label class="control-label"&gt;Regular Input Field&lt;/label&gt;
+        &lt;span class="prefix-wrapper"&gt; 
+            &lt;input type="text" class="form-control" placeholder="Search our site..."&gt;                
+            &lt;span class="glyphicon glyphicon-search text-muted form-control-prefix" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The icons also inherit validation state colors if you add a <code>has-success</code>, <code>has-warning</code> or <code>has-error</code> class to your <code>form-group</code> block. For the color to work, ensure you are not overriding the color of the icon using a class like <code>text-muted</code> like I am in the exmaples above.</p>
+
+<h2>
+<a id="using-with-feedback-icons" class="anchor" href="#using-with-feedback-icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using with Feedback Icons</h2>
+
+<p>Note that using the prefix icons and feedback icons on the same field at once is not currently supported. If you try to do this, you'll find that one of the icons displays off the vertical center. This will be addressed in a future release.</p>
+
+<h2>
+<a id="source" class="anchor" href="#source" aria-hidden="true"><span class="octicon octicon-link"></span></a> Source</h2>
+
+<p>The LESS source code for this library is included in the <code>src</code> directory. To build, you will need to import the Bootstrap <code>variables.less</code> and <code>mixins.less</code> files at a minimum or it will fail.</p>
+
+<h2>
+<a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<p>The library has been tested with Bootstrap version 3.3.1. Older versions are not supported and there are no plans to do so in the future. It is compatible with the same desktop and mobile browsers that Bootstrap itself is:</p>
+
+<ul>
+<li>Chrome (latest version on Windows, Mac OS X, Android and iOS)</li>
+<li>Firefox (latest version on Windows, Mac OS X and Android)</li>
+<li>Internet Explorer (version 8 and above, Windows only)</li>
+<li>Opera (latest version on Windows and Mac OS X only)</li>
+<li>Safari (latest version on Mac OS X and iOS only)</li>
+</ul>
+
+<p>Unofficially, the library should work with Chromium and Chrome for Linux, Firefox for Linux and Internet Explorer 7, but these browsers are not officially supported.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>bootstrap-input-prefix is released under the MIT license and is copyright 2015 Array Software. Boiled down to smaller chunks, it can be described with the following conditions.</p>
+
+<h4>
+<a id="it-requires-you-to" class="anchor" href="#it-requires-you-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>It requires you to:</h4>
+
+<ul>
+<li>Keep the license and copyright notice included in bootstrap-input-prefix's CSS files when you use them in your works</li>
+</ul>
+
+<h4>
+<a id="it-permits-you-to" class="anchor" href="#it-permits-you-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>It permits you to:</h4>
+
+<ul>
+<li>Freely download and use bootstrap-input-prefix, in whole or in part, for personal, private, company internal, or commercial purposes</li>
+<li>Use bootstrap-input-prefix in packages or distributions that you create</li>
+<li>Modify the source code</li>
+<li>Grant a sublicense to modify and distribute bootstrap-input-prefix to third parties not included in the license</li>
+</ul>
+
+<h4>
+<a id="it-forbids-you-to" class="anchor" href="#it-forbids-you-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>It forbids you to:</h4>
+
+<ul>
+<li>Hold the authors and license owners liable for damages as bootstrap-input-prefix is provided without warranty</li>
+<li>Hold the creators or copyright holders of bootstrap-input-prefix liable</li>
+<li>Redistribute any piece of bootstrap-input-prefix without proper attribution</li>
+<li>Use any marks owned by Array Software in any way that might state or imply that Array Software endorses your distribution</li>
+<li>Use any marks owned by Array Software in any way that might state or imply that you created the Array Software software in question</li>
+</ul>
+
+<h4>
+<a id="it-does-not-require-you-to" class="anchor" href="#it-does-not-require-you-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>It does not require you to:</h4>
+
+<ul>
+<li>Include the source of bootstrap-input-prefix itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</li>
+<li>Submit changes that you make to bootstrap-input-prefix back to the bootstrap-input-prefix project (though such feedback is encouraged)</li>
+</ul>
+
+<p>See the LICENSE file for the full bootstrap-input-prefix license.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/arraycode">arraycode</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
