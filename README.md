@@ -2,6 +2,10 @@
 
 The **bootstrap-input-prefix** library is a small add-on for Twitter's Bootstrap CSS framework that enables you to add glyphicons (or Font-Awesome icons) into your form input fields. By default, Bootstrap includes the concept of feedback icons for form fields. These are typically used to place an icon on the inside right of a form field to indicate the validation state of the field (i.e. a checkbox for a valid field). This doesn't allow you to place icons on the inside left of the form field, however. Hence the need for **bootstrap-input-prefix**.
 
+## Example
+
+![Screenshot of bootstrap-input-prefix in action](https://cloud.githubusercontent.com/assets/167845/7336618/d9ff3f24-ebff-11e4-88b4-cab1c76fa89e.png)
+
 ## Usage
 
 To use, simply load the CSS file in your HTML page *after* the line where you load Bootstrap:
