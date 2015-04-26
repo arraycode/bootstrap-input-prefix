@@ -58,7 +58,7 @@ The LESS source code for this library is included in the `src` directory. To bui
 
 ## Compatibility
 
-The library has been tested with Bootstrap version 3.3.1. Older versions are not supported and there are no plans to do so in the future. It is compatible with the same desktop and mobile browsers that Bootstrap itself is:
+The library has been tested with Bootstrap version 3.3.1. Older versions are not supported and there are no plans to do so in the future. It should be compatible with the same desktop and mobile browsers that Bootstrap itself is:
 
 * Chrome (latest version on Windows, Mac OS X, Android and iOS)
 * Firefox (latest version on Windows, Mac OS X and Android)
