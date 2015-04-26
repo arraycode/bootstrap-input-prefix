@@ -6,6 +6,8 @@ The **bootstrap-input-prefix** library is a small add-on for Twitter's Bootstrap
 
 ![Screenshot of bootstrap-input-prefix in action](https://cloud.githubusercontent.com/assets/167845/7336618/d9ff3f24-ebff-11e4-88b4-cab1c76fa89e.png)
 
+See the `examples/index.html` file for more usage examples.
+
 ## Usage
 
 To use, simply load the CSS file in your HTML page *after* the line where you load Bootstrap:
